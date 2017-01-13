@@ -1,6 +1,7 @@
 const elixir = require('laravel-elixir');
 
 require('laravel-elixir-vue-2');
+require('laravel-elixir-imagemin');
 
 /*
  |--------------------------------------------------------------------------
@@ -14,5 +15,6 @@ require('laravel-elixir-vue-2');
  */
 
 elixir((mix) => {
-    mix.less('master.less');
+    mix.less('master.less')
+      .imagemin();
 });

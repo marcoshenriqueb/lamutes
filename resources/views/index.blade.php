@@ -21,22 +21,22 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="breadcrumb-fullscreen-parent phone-menu-bg">
-					<div class="breadcrumb breadcrumb-fullscreen alignleft small-description overlay almost-black-overlay" style="background-image: url('/img/header/header.png');" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
+					<div class="breadcrumb breadcrumb-fullscreen alignleft small-description overlay almost-black-overlay" style="background-image: url('/images/capa.jpg');" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
 						<div id="home" style="position: absolute;left: 0;top: 0;">
 							<div class="intro-header">
 								<div class="js-height-full star" style="height: 955px;">
 									<div class="star-pattern-1 js-height-full" style="height: 994px;"></div>
 									<div class="col-sm-12">
 										<div class="starTitle">
-											<h4>Theme Brothers</h4>
+											<h4>Cool Brothers</h4>
 											<div class="grid__item">
-						                		<h1>
-								                	<a class="link link-yaku" href="#">
+		                		<h1>
+				                	<a class="link link-yaku" href="#">
 														<span>L</span><span>A</span><span>M</span><span>U</span><span>T</span><span>E</span><span>S</span>
 													</a>
-										        </h1>
-						                	</div>
-											<h4>Template</h4>
+								        </h1>
+		                	</div>
+											<h4>Rock Band</h4>
 										</div>
 										<canvas class="cover" width="1920" height="955"></canvas>
 									</div>
@@ -443,7 +443,7 @@
 		</div><!-- end menu-fixed-container -->
 		<!-- =============== STAR LOGO ================ -->
 		<div class="logo-container-top">
-			<a href="index.html"><img src="/img/logo/whiteLogo.png" alt="Aqura"></a>
+			<a href="index.html"><img src="/images/lamutes.png" alt="Aqura"></a>
 		</div><!-- end logo-container-top -->
 		<!-- =============== END LOGO ================ -->
 	</div><!-- end topHeader -->
@@ -963,7 +963,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="copyFooter">
-							<a href="#">&copy; Aqura 2016</a>
+							<a href="#">&copy; Lamutes 2017</a>
 						</div>
 					</div>
 					<div class="col-sm-4">
@@ -991,9 +991,6 @@
 	</section>
 	<!-- =============== END FOOTER ================ -->
 
-	<!-- ================================================== -->
-	<!-- =============== START JQUERY SCRIPTS ================ -->
-	<!-- ================================================== -->
 	<script src="/js/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/jplayer/jplayer/jquery.jplayer.js"></script>
@@ -1008,8 +1005,5 @@
 			});
 		</script>
 	<![endif]-->
-	<!-- ================================================== -->
-	<!-- =============== END JQUERY SCRIPTS ================ -->
-	<!-- ================================================== -->
 </body>
 </html>

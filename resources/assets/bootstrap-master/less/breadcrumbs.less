@@ -2,6 +2,7 @@
 // Breadcrumbs
 // --------------------------------------------------
 .no-mb {
+	height: 100vh;
 	width: 100%;
 	.breadcrumb.breadcrumb-fullscreen {
 		margin-bottom: 0;
@@ -144,12 +145,15 @@
 	}
 
 	&.breadcrumb-fullscreen {
+		height: 100vh;
+		width: 100%;
 		padding-top: 120px;
-		display: table;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 
 		& > * {
-			display: table-cell;
-			vertical-align: middle;
 			> a {
 				font-size: 12px;
 				font-weight: 700;

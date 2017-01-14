@@ -22,27 +22,17 @@
 			<div class="col-sm-12">
 				<div class="breadcrumb-fullscreen-parent phone-menu-bg">
 					<div class="breadcrumb breadcrumb-fullscreen alignleft small-description overlay almost-black-overlay" style="background-image: url('/images/capa.jpg');" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
-						<div id="home" style="position: absolute;left: 0;top: 0;">
-							<div class="intro-header">
-								<div class="js-height-full star" style="height: 955px;">
-									<div class="star-pattern-1 js-height-full" style="height: 994px;"></div>
-									<div class="col-sm-12">
-										<div class="starTitle">
-											<h4>Cool Brothers</h4>
-											<div class="grid__item">
-		                		<h1>
-				                	<a class="link link-yaku" href="#">
-														<span>L</span><span>A</span><span>M</span><span>U</span><span>T</span><span>E</span><span>S</span>
-													</a>
-								        </h1>
-		                	</div>
-											<h4>Rock Band</h4>
-										</div>
-										<canvas class="cover" width="1920" height="955"></canvas>
-									</div>
-								</div>
-							</div>
-	   					</div>
+						<div class="starTitle">
+							<h4>Cool Brothers</h4>
+							<div class="grid__item">
+            		<h1>
+                	<a class="link link-yaku" href="#">
+										<span>L</span><span>A</span><span>M</span><span>U</span><span>T</span><span>E</span><span>S</span>
+									</a>
+				        </h1>
+            	</div>
+							<h4>Rock Band</h4>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -6,6 +6,8 @@
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
+    "buble": "^0.15.2",
+    "css-loader": "^0.26.1",
     "gulp": "^3.9.1",
     "gulp-if": "^2.0.2",
     "jquery": "^3.1.0",
@@ -13,11 +15,13 @@
     "laravel-elixir-imagemin": "^0.2.3",
     "laravel-elixir-images": "^2.0.0",
     "laravel-elixir-vue-2": "^0.2.0",
-    "laravel-elixir-webpack-official": "^1.0.2",
+    "laravel-elixir-webpack-official": "^1.0.10",
     "lodash": "^4.16.2",
     "underscore": "^1.8.3",
     "underscore-deep-extend": "^1.1.5",
     "vue": "^2.0.1",
-    "vue-resource": "^1.0.3"
+    "vue-loader": "^10.0.2",
+    "vue-resource": "^1.0.3",
+    "vue-template-compiler": "^2.1.8"
   }
 }

@@ -16,5 +16,6 @@ require('laravel-elixir-imagemin');
 
 elixir((mix) => {
     mix.less('master.less')
+      .webpack('app.js')
       .imagemin();
 });

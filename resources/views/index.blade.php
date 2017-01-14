@@ -295,28 +295,9 @@
 				<ul>
 					<!-- Menu Fixed Item -->
 					<li>
-						<a href="index.html">
-							home
+						<a href="#">
+							Topo
 						</a>
-						<ul class="sub-menu">
-							<!-- Menu Fixed Sub Menu Item -->
-							<li>
-								<a href="index.html">
-									home star
-								</a>
-							</li>
-							<li>
-								<a href="index-royal-slider.html">
-									home royal slider
-								</a>
-							</li>
-							<!-- Menu Fixed Sub Menu Item -->
-							<li>
-								<a href="index-video.html">
-									home video
-								</a>
-							</li>
-						</ul>
 					</li>
 					<li>
 						<a href="albumsGrid.html">
@@ -583,15 +564,15 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="countdownTitle">
-						<h4>Next Event</h4>
+						<h4>Próximo Show</h4>
 						<a href="singleEvent.html"><img src="/img/events/box.png" alt="Event"></a>
 					</div>
-					<div class="sm-countdown sm_content_element sm-style2" id="sm_countdown-19" data-date="2016/10/23">
+					<div class="sm-countdown sm_content_element sm-style2" id="sm_countdown-19" data-date="2017/01/23">
 						<div class="displayCounter">
 							<div class="column">
 								<div class="sm_countdown_inner">
 									<input class="element days" readonly="readonly" data-min="0" data-max="365" data-width="200" data-height="200" data-thickness="0.15" data-fgcolor="#fff" data-bgcolor="#8e8d8d" data-angleoffset="180">
-									<span class="unit days-title">days</span>
+									<span class="unit days-title">dias</span>
 								</div>
 							</div>
 							<div class="column">

@@ -11,14 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'HomeController@index')->name('home.index');
 
 Auth::routes();
 
-Route::get('/admin', 'HomeController@index');
+Route::get('/admin', 'AdminController@index')->name('admin.index');
+
 Route::get('/admin/cover', 'CoverController@edit');
+Route::post('/admin/cover', 'CoverController@store');
+Route::put('/admin/cover', 'CoverController@update');
 
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/login', 'Auth\LoginController@login');

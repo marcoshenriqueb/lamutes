@@ -437,7 +437,7 @@
 					<li class="col-md-3 col-sm-3 col-xs-12">
 						<div class="album-icon">
 							<span class="thumbs-album">
-								<a href="albumsSingle1.html"><img width="270" height="270" src="/img/albums/albumCover.png" class="attachment-album-thumbnail wp-post-image" alt="album-cover-1"></a>
+								<a href="albumsSingle1.html"><img width="270" height="270" src="/images/albumCover.png" class="attachment-album-thumbnail wp-post-image" alt="album-cover-1"></a>
 							</span>
 							<span class="disk"></span>
 						</div><!-- END ALBUM ICON -->
@@ -699,14 +699,8 @@
 					<span class="heading-b3"></span>
 					<p>Check out my latest videos and follow me on <a href="#">Youtube</a> & <a href="#">Vimeo</a> to view more.</p>
 				</div><!-- end sectionTtile -->
-				<div class="col-sm-4">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/VV-Q-aRHTDE"  allowfullscreen></iframe>
-				</div><!-- end col-sm-4 -->
-				<div class="col-sm-4">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/VxG5C4q_rEs"  allowfullscreen></iframe>
-				</div><!-- end col-sm-4 -->
-				<div class="col-sm-4">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/OkbuRa1o1wA"  allowfullscreen></iframe>
+				<div class="col-sm-4 col-sm-offset-4">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/BC_A8xQWpVI" allowfullscreen></iframe>
 				</div><!-- end col-sm-4 -->
 			</div>
 		</div>

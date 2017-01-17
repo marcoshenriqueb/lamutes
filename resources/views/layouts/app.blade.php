@@ -81,6 +81,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    <script src="/js/jquery.js" charset="utf-8"></script>
+    <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>

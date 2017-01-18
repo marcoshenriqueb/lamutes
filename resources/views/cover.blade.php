@@ -5,7 +5,11 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <div class="panel panel-default">
-              <div class="panel-heading">Capa</div>
+              <div class="panel-heading clearfix">
+                  <div class="pull-left">
+                      <span class="lead">Capa</span>
+                  </div>
+              </div>
               <div class="panel-body">
                 @if(count($cover) === 1)
                   {!! Form::model($cover, ['url' => '/admin/cover', 'files' => true, 'method' => 'put']) !!}

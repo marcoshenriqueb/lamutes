@@ -15,11 +15,16 @@ Route::get('/', 'HomeController@index')->name('home.index');
 
 Auth::routes();
 
-Route::get('/admin', 'AdminController@index')->name('admin.index');
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/', 'AdminController@index')->name('admin.index');
 
-Route::get('/admin/cover', 'CoverController@edit');
-Route::post('/admin/cover', 'CoverController@store');
-Route::put('/admin/cover', 'CoverController@update');
+    Route::get('/cover', 'CoverController@edit');
+    Route::post('/cover', 'CoverController@store');
+    Route::put('/cover', 'CoverController@update');
+
+    Route::resource('/albums', 'AlbumController');
+});
+
 
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('/login', 'Auth\LoginController@login');

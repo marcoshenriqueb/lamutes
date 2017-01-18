@@ -12,6 +12,9 @@
             <li class="list-group-item">
               <a href="{{ url('/admin/cover') }}"><span class="lead">Capa</span></a>
             </li>
+            <li class="list-group-item">
+              <a href="{{ route('albums.index') }}"><span class="lead">Albums</span></a>
+            </li>
         </div>
     </div>
 </div>

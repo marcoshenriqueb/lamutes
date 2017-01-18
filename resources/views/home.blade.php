@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="HandheldFriendly" content="true" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<title>Home-Page-Star</title>
+	<title>Lamutes</title>
 	<link rel="icon" href="/img/content/icon.png">
 	<!-- ========== CSS INCLUDES ========== -->
 	<link rel="stylesheet" href="/css/master.css">

@@ -425,69 +425,39 @@
 	<!-- =============== END TOP HEADER ================ -->
 
 	<!-- =============== START ALBUM COVER SECTION ================ -->
+	@if(count($albums) > 0)
 	<section class="padding albumsHome hide-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="sectionTitle paddingBottom">
 						<span class="heading-t3"></span>
-						<h2><a href="albumsFullBackground.html">Discography</a></h2>
+						<h2><a href="albumsFullBackground.html">Discografia</a></h2>
 						<span class="heading-b3"></span>
 					</div><!-- end sectionTtile -->
 				</div><!-- end col-sm-12 -->
 			</div>
 			<div class="list-albums">
 				<ul class="list-feature col-md-12 col-xs-12 col-sm-12">
-					<li class="col-md-3 col-sm-3 col-xs-12">
-						<div class="album-icon">
-							<span class="thumbs-album">
-								<a href="albumsSingle1.html"><img width="270" height="270" src="/images/albumCover.png" class="attachment-album-thumbnail wp-post-image" alt="album-cover-1"></a>
-							</span>
-							<span class="disk"></span>
-						</div><!-- END ALBUM ICON -->
-						<div class="name">
-							<h3>Noon Xoxo</h3>
-							<p>Chillout</p>
-						</div><!-- end name -->
-					</li>
-
-					<li class="col-md-3 col-sm-3 col-xs-12">
-						<div class="album-icon albumIcon1">
-							<span class="thumbs-album">
-								<a href="albumsSingle3.html"><img width="270" height="270" src="/img/albums/albumCover.png" class="attachment-album-thumbnail wp-post-image" alt="album-cover-1"></a>
-							</span>
-							<span class="disk"></span>
-						</div>
-						<div class="name">
-							<h3>Stunt Vibe</h3>									<p>Chillout</p>
-						</div>
-						</li>
-						<li class="col-md-3 col-sm-3 col-xs-12">
-							<div class="album-icon albumIcon2">
+					@foreach($albums as $a)
+						<li class="col-sm-3 col-xs-12">
+							<div class="album-icon">
 								<span class="thumbs-album">
-									<a href="albumsSingle4.html"><img width="270" height="270" src="/img/albums/albumCover.png" class="attachment-album-thumbnail wp-post-image" alt="album-cover-1"></a>
-									</span>
+									<a href="albumsSingle1.html"><img width="270" height="270" src="{{$a->cover_image}}" class="attachment-album-thumbnail wp-post-image" alt="album-cover-1"></a>
+								</span>
 								<span class="disk"></span>
-							</div>
+							</div><!-- END ALBUM ICON -->
 							<div class="name">
-								<h3>Strange Clouds</h3>								<p>Chillout</p>
-							</div>
+								<h3>{{$a->title}}</h3>
+								<p>{{$a->subtitle}}</p>
+							</div><!-- end name -->
 						</li>
-						<li class="col-md-3 col-sm-3 col-xs-12">
-							<div class="album-icon albumIcon3">
-								<span class="thumbs-album">
-									<a href="albumsSingle2.html"><img width="270" height="270" src="/img/albums/albumCover.png" class="attachment-album-thumbnail wp-post-image" alt="album-cover-1"></a>
-									</span>
-								<span class="disk"></span>
-							</div>
-							<div class="name">
-								<h3>Natural Earth</h3>								<p>Chillout</p>
-							</div>
-						</li>
+					@endforeach
 				</ul>
 			</div><!-- end list-albums -->
 		</div><!-- end container -->
 	</section>
+	@endif
 	<!-- =============== END ALBUM COVER SECTION ================ -->
 
 	<!-- =============== START EVENTS SECTION-1 ================ -->

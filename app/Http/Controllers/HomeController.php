@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Album;
 use App\Cover;
 
 class HomeController extends Controller
@@ -15,12 +15,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-      $cover = Cover::first();
+        $cover = Cover::first();
+        $albums = Album::all();
 
-      if (!$cover) {
-        return redirect()->route('login');
-      }
+        if (!$cover) {
+            return redirect()->route('login');
+        }
 
-      return view('home', compact('cover'));
+        return view('home', compact('cover', 'albums'));
     }
 }

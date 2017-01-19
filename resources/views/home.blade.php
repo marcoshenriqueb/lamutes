@@ -432,7 +432,7 @@
 				<div class="col-sm-12">
 					<div class="sectionTitle paddingBottom">
 						<span class="heading-t3"></span>
-						<h2><a href="albumsFullBackground.html">Discografia</a></h2>
+						<h2><a href="albumsFullBackground.html">Música</a></h2>
 						<span class="heading-b3"></span>
 					</div><!-- end sectionTtile -->
 				</div><!-- end col-sm-12 -->
@@ -440,12 +440,12 @@
 			<div class="list-albums">
 				<ul class="list-feature col-md-12 col-xs-12 col-sm-12">
 					@foreach($albums as $a)
-						<li class="col-sm-3 col-xs-12">
+						<li class="col-sm-3 {{$loop->index === 0 ? 'col-sm-offset-3' : ''}} col-xs-12">
 							<div class="album-icon">
 								<span class="thumbs-album">
 									<a href="albumsSingle1.html"><img width="270" height="270" src="{{$a->cover_image}}" class="attachment-album-thumbnail wp-post-image" alt="album-cover-1"></a>
 								</span>
-								<span class="disk"></span>
+								<span style="background: url({{$a->disk_image}}) no-repeat center center;" class="disk"></span>
 							</div><!-- END ALBUM ICON -->
 							<div class="name">
 								<h3>{{$a->title}}</h3>

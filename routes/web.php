@@ -23,6 +23,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::put('/cover', 'CoverController@update');
 
     Route::resource('/albums', 'AlbumController');
+
+    Route::resource('/events', 'EventController');
 });
 
 

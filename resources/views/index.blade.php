@@ -15,6 +15,9 @@
             <li class="list-group-item">
               <a href="{{ route('albums.index') }}"><span class="lead">Albums</span></a>
             </li>
+            <li class="list-group-item">
+              <a href="{{ route('events.index') }}"><span class="lead">Eventos</span></a>
+            </li>
         </div>
     </div>
 </div>

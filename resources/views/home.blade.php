@@ -432,7 +432,7 @@
 				<div class="col-sm-12">
 					<div class="sectionTitle paddingBottom">
 						<span class="heading-t3"></span>
-						<h2><a href="albumsFullBackground.html">Música</a></h2>
+						<h2><a href="albumsFullBackground.html">Músicas</a></h2>
 						<span class="heading-b3"></span>
 					</div><!-- end sectionTtile -->
 				</div><!-- end col-sm-12 -->
@@ -457,9 +457,9 @@
 			</div><!-- end list-albums -->
 		</div><!-- end container -->
 	</section>
-	@endif
 	<!-- =============== END ALBUM COVER SECTION ================ -->
-
+	@endif
+	@if(count($events) > 0)
 	<!-- =============== START EVENTS SECTION-1 ================ -->
 	<section style="background-image: url(/img/events/tableEventsHome.png);" class="background-properties hide-section paddingHomeEvents">
 		<div class="tableEvents">
@@ -468,7 +468,7 @@
 					<div class="col-sm-12">
 						<div class="sectionTitle paddingBottom">
 							<span class="heading-t3"></span>
-							<h2><a href="events.html">Events</a></h2>
+							<h2><a href="events.html">Próximos Shows</a></h2>
 							<span class="heading-b3"></span>
 						</div><!-- end sectionTtile -->
 						<table>
@@ -476,44 +476,19 @@
 								<th class="date">Date</th>
 								<th class="venue">Venue</th>
 								<th class="location">Location</th>
-								<th class="tickets">Tickets</th>
+								<th class="tickets"></th>
 								<th></th>
 							</tr>
+							@foreach($events as $e)
 							<tr>
-								<td class="aqura-date"><a href="#"><i class="fa fa-plus"></i></a><a href="singleEvent.html">Mar 06</a></td>
-								<td class="aqura-location"><a href="singleEvent.html">Central Park</a></td>
-								<td class="aqura-city"><a href="singleEvent.html">Cluj Napoca, Bontida Romania</a></td>
-								<td class="aqura-tickets"><a href="singleEvent.html">Tickets</a></td>
-								<td class="aqura-vip"><a href="singleEvent.html">RSVP</a></td>
+								<td class="aqura-date"><a href="#"><i class="fa fa-plus"></i></a><a href="singleEvent.html">{{$e->date}}</a></td>
+								<td class="aqura-location"><a href="singleEvent.html">{{$e->venue}}</a></td>
+								<td class="aqura-city"><a href="singleEvent.html">{{$e->location}}</a></td>
+								@if($e->fb_url)
+								<td class="aqura-vip"><a href="{{$e->fb_url}}">RSVP</a></td>
+								@endif
 							</tr>
-							<tr>
-								<td class="aqura-date"><a href="#"><i class="fa fa-plus"></i></a><a href="singleEvent.html">Mar 06</a></td>
-								<td class="aqura-location"><a href="singleEvent.html">Central Park</a></td>
-								<td class="aqura-city"><a href="singleEvent.html">Cluj Napoca, Bontida Romania</a></td>
-								<td class="aqura-tickets"><a href="singleEvent.html">Tickets</a></td>
-								<td class="aqura-vip"><a href="singleEvent.html">RSVP</a></td>
-							</tr>
-							<tr>
-								<td class="aqura-date"><a href="#"><i class="fa fa-plus"></i></a><a href="singleEvent.html">Mar 06</a></td>
-								<td class="aqura-location"><a href="singleEvent.html">Central Park</a></td>
-								<td class="aqura-city"><a href="singleEvent.html">Cluj Napoca, Bontida Romania</a></td>
-								<td class="aqura-tickets"><a href="singleEvent.html">Tickets</a></td>
-								<td class="aqura-vip"><a href="singleEvent.html">RSVP</a></td>
-							</tr>
-							<tr>
-								<td class="aqura-date"><a href="#"><i class="fa fa-plus"></i></a><a href="singleEvent.html">Mar 06</a></td>
-								<td class="aqura-location"><a href="singleEvent.html">Central Park</a></td>
-								<td class="aqura-city"><a href="singleEvent.html">Cluj Napoca, Bontida Romania</a></td>
-								<td class="aqura-tickets"><a href="singleEvent.html">Tickets</a></td>
-								<td class="aqura-vip"><a href="singleEvent.html">RSVP</a></td>
-							</tr>
-							<tr>
-								<td class="aqura-date"><a href="#"><i class="fa fa-plus"></i></a><a href="singleEvent.html">Mar 06</a></td>
-								<td class="aqura-location"><a href="singleEvent.html">Central Park</a></td>
-								<td class="aqura-city"><a href="singleEvent.html">Cluj Napoca, Bontida Romania</a></td>
-								<td class="aqura-tickets"><a href="singleEvent.html">Tickets</a></td>
-								<td class="aqura-vip"><a href="singleEvent.html">RSVP</a></td>
-							</tr>
+							@endforeach
 						</table>
 					</div><!-- end col-sm-12 -->
 				</div><!-- end row -->
@@ -521,7 +496,7 @@
 		</div><!-- end tableEvents -->
 	</section>
 	<!-- =============== END EVENTS SECTION-1 ================ -->
-
+	@endif
 	<!-- =============== START EVENTS SECTION-2 ================ -->
 	<section class="padding hide-section countdownSection background-properties" style="background-image: url(/img/events/countdownHome.png);">
 		<div class="container">

@@ -38,7 +38,7 @@ class AlbumController extends Controller
      */
     public function create()
     {
-        return view('albums.create', compact('albums'));
+        return view('albums.create');
     }
 
     /**

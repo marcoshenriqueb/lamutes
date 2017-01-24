@@ -496,7 +496,6 @@
 		</div><!-- end tableEvents -->
 	</section>
 	<!-- =============== END EVENTS SECTION-1 ================ -->
-	@endif
 	<!-- =============== START EVENTS SECTION-2 ================ -->
 	<section class="padding hide-section countdownSection background-properties" style="background-image: url(/img/events/countdownHome.png);">
 		<div class="container">
@@ -504,9 +503,9 @@
 				<div class="col-sm-12">
 					<div class="countdownTitle">
 						<h4>Próximo Show</h4>
-						<a href="singleEvent.html"><img src="/img/events/box.png" alt="Event"></a>
+						<a href="{{$firstEvent['link']}}" target="_blank"><img src="/img/events/box.png" alt="Event"></a>
 					</div>
-					<div class="sm-countdown sm_content_element sm-style2" id="sm_countdown-19" data-date="2017/01/23">
+					<div class="sm-countdown sm_content_element sm-style2" id="sm_countdown-19" data-date="{{$firstEvent['date']}}">
 						<div class="displayCounter">
 							<div class="column">
 								<div class="sm_countdown_inner">
@@ -539,7 +538,8 @@
 		</div>
 	</section>
 	<!-- =============== END EVENTS SECTION-2 ================ -->
-
+	@endif
+	@if(false)
 	<!-- =============== START HOME-BLOG SECTION ================ -->
 	<section class="padding hide-section background-properties blogHomeSection" style="background-image: url(/img/blog/homeBlog.png);">
 		<div class="container">
@@ -619,7 +619,8 @@
 		</div><!-- end row -->
 	</section>
 	<!-- =============== END HOME-NLOG SECTION ================ -->
-
+	@endif
+	@if(false)
 	<!-- =============== START TWITTER SECTION ================ -->
 	<section class="padding hide-section background-properties" style="background-image: url(/img/twitter/homeTwitter.png);">
 		<div class="twitter">
@@ -637,16 +638,16 @@
 		</div>
 	</section>
 	<!-- =============== END TWITTER SECTION ================ -->
-
+	@endif
 	<!-- =============== START VIDEO SECTION ================ -->
 	<section class="videoHome hide-section padding">
 		<div class="container">
 			<div class="row">
 				<div class="sectionTitle">
 					<span class="heading-t3"></span>
-					<h2><a href="video.html">Upload Video</a></h2>
+					<h2>Nossos Vídeos</h2>
 					<span class="heading-b3"></span>
-					<p>Check out my latest videos and follow me on <a href="#">Youtube</a> & <a href="#">Vimeo</a> to view more.</p>
+					<p>Acessem nosso canal no <a href="https://www.youtube.com/channel/UCB023eytdBzky0ZG6fXvOxg">Youtube</a> para mais novidades.</p>
 				</div><!-- end sectionTtile -->
 				<div class="col-sm-4 col-sm-offset-4">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/BC_A8xQWpVI" allowfullscreen></iframe>
@@ -655,7 +656,7 @@
 		</div>
 	</section>
 	<!-- =============== END VIDEO SECTION ================ -->
-
+	@if(false)
 	<!-- =============== START GALLERY SECTION ================ -->
 	<section style="padding-bottom:0; padding-top:0;" class="hide-section">
 		<div class="gallerySection">
@@ -767,7 +768,8 @@
 		</div>
 	</section>
 	<!-- =============== END GALLERY SECTION ================ -->
-
+	@endif
+	@if(false)
 	<!-- =============== START HOME-SHOP SECTION ================ -->
 	<section class="shopHomePage shopHomePadding hide-section">
 		<div class="shopSection">
@@ -869,7 +871,7 @@
 		</div>
 	</section>
 	<!-- =============== END HOME-SHOP SECTION ================ -->
-
+	@endif
 	<!-- =============== START FOOTER ================ -->
 	<section style="background-color:#eeeeee;" class="hide-section">
 		<div class="footer footerPadding">
@@ -882,14 +884,11 @@
 					</div>
 					<div class="col-sm-4">
 						<nav class="social-icons">
-							<ul class="clearfix">
-								<li><a href="#" class="icon-button shopIcon"><i class="fa fa-twitter"></i><span></span></a></li>
-								<li><a href="#" class="icon-button shopIcon"><i class="fa fa-facebook"></i><span></span></a></li>
-								<li><a href="#" class="icon-button shopIcon"><i class="fa fa-apple"></i><span></span></a></li>
-								<li><a href="#" class="icon-button shopIcon"><i class="fa fa-lastfm"></i><span></span></a></li>
-								<li><a href="#" class="icon-button shopIcon"><i class="fa fa-soundcloud"></i><span></span></a></li>
-								<li><a href="#" class="icon-button shopIcon"><i class="fa fa-youtube-play"></i><span></span></a></li>
-								<li><a href="#" class="icon-button shopIcon"><i class="fa fa-vimeo"></i><span></span></a></li>
+							<ul class="clearfix" style="display:flex;justify-content:center;">
+								<li><a href="https://www.facebook.com/lamut3s/" target="_blank" class="icon-button shopIcon"><i class="fa fa-facebook"></i><span></span></a></li>
+								<li><a href="https://www.instagram.com/lamutes/" target="_blank" class="icon-button shopIcon"><i class="fa fa-instagram"></i><span></span></a></li>
+								<li><a href="https://itunes.apple.com/br/artist/lamutes/" target="_blank" class="icon-button shopIcon"><i class="fa fa-apple"></i><span></span></a></li>
+								<li><a href="https://www.youtube.com/channel/UCB023eytdBzky0ZG6fXvOxg" target="_blank" class="icon-button shopIcon"><i class="fa fa-youtube-play"></i><span></span></a></li>
 							</ul>
 						</nav>
 					</div>

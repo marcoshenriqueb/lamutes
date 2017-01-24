@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Album;
 use App\Cover;
 use App\Event;
+use App\HomeImages;
 use Carbon\Carbon;
 
 class HomeController extends Controller
@@ -30,10 +31,12 @@ class HomeController extends Controller
             ];
         }
 
+        $homeImages = HomeImages::first();
+
         if (!$cover) {
             return redirect()->route('login');
         }
 
-        return view('home', compact('cover', 'albums', 'events', 'firstEvent'));
+        return view('home', compact('cover', 'albums', 'events', 'firstEvent', 'homeImages'));
     }
 }

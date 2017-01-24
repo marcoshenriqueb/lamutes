@@ -22,6 +22,10 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/cover', 'CoverController@store');
     Route::put('/cover', 'CoverController@update');
 
+    Route::get('/images', 'HomeImagesController@edit');
+    Route::post('/images', 'HomeImagesController@store');
+    Route::put('/images', 'HomeImagesController@update');
+
     Route::resource('/albums', 'AlbumController');
 
     Route::resource('/events', 'EventController');

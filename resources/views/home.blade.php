@@ -461,7 +461,7 @@
 	@endif
 	@if(count($events) > 0)
 	<!-- =============== START EVENTS SECTION-1 ================ -->
-	<section style="background-image: url(/img/events/tableEventsHome.png);" class="background-properties hide-section paddingHomeEvents">
+	<section style="background-image: url(@if(count($homeImages) > 0) '{{$homeImages->next_event_image}}' @else /img/events/tableEventsHome.png @endif);" class="background-properties hide-section paddingHomeEvents">
 		<div class="tableEvents">
 			<div class="container">
 				<div class="row">
@@ -473,9 +473,9 @@
 						</div><!-- end sectionTtile -->
 						<table>
 							<tr class="tableEventsTitle">
-								<th class="date">Date</th>
-								<th class="venue">Venue</th>
-								<th class="location">Location</th>
+								<th class="date">Data</th>
+								<th class="venue">Local</th>
+								<th class="location">Endereço</th>
 								<th class="tickets"></th>
 								<th></th>
 							</tr>
@@ -485,7 +485,7 @@
 								<td class="aqura-location"><a href="singleEvent.html">{{$e->venue}}</a></td>
 								<td class="aqura-city"><a href="singleEvent.html">{{$e->location}}</a></td>
 								@if($e->fb_url)
-								<td class="aqura-vip"><a href="{{$e->fb_url}}">RSVP</a></td>
+								<td class="aqura-vip"><a href="{{$e->fb_url}}" target="_blank">+</a></td>
 								@endif
 							</tr>
 							@endforeach
@@ -497,7 +497,7 @@
 	</section>
 	<!-- =============== END EVENTS SECTION-1 ================ -->
 	<!-- =============== START EVENTS SECTION-2 ================ -->
-	<section class="padding hide-section countdownSection background-properties" style="background-image: url(/img/events/countdownHome.png);">
+	<section class="padding hide-section countdownSection background-properties" style="background-image: url(@if(count($homeImages) > 0) '{{$homeImages->next_event_image2}}' @else /img/events/countdownHome.png @endif);">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">

@@ -18,6 +18,9 @@
             <li class="list-group-item">
               <a href="{{ route('events.index') }}"><span class="lead">Eventos</span></a>
             </li>
+            <li class="list-group-item">
+              <a href="{{ url('/admin/images') }}"><span class="lead">Imagens da home</span></a>
+            </li>
         </div>
     </div>
 </div>

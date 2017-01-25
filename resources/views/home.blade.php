@@ -21,7 +21,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="breadcrumb-fullscreen-parent phone-menu-bg">
-					<div class="breadcrumb breadcrumb-fullscreen alignleft small-description overlay almost-black-overlay" style="background-image: url({{$cover->cover_image}});" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
+					<div class="breadcrumb breadcrumb-fullscreen alignleft small-description overlay almost-black-overlay" style="background-image: url('{{$cover->cover_image}}');" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
 						<div class="starTitle">
 							@if($cover->subtitle1)
 								<h4>{{$cover->subtitle1}}</h4>

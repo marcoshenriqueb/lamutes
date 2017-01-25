@@ -17,7 +17,7 @@
 	</div>
 
 	<!-- =============== START BREADCRUMB ================ -->
-	<section class="no-mb">
+	<section id="top" class="no-mb">
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="breadcrumb-fullscreen-parent phone-menu-bg">
@@ -227,46 +227,6 @@
 	<div class="topHeader" >
 		<div class="header">
 			<div class="rightTopHeader">
-				<div class="cartContainer">
-					<div class="myCart">
-						<ul>
-							<li class="cartTitle"><img src="/img/shop/cart.png" alt=""><span>0</span></li>
-						</ul>
-					</div><!-- end myCart -->
-					<div class="cartParent">
-						<div class="cartItems">
-							<ul>
-								<li>
-									<div class="priceCart">
-										<img src="/img/shop/cartContainer.png" alt="">
-										<a href="#">Hoodie T.Brothers <!-- <span><i class="fa fa-times"></i></span> --></a>
-										<p>Price:&nbsp;<span>&pound;15,99</span></p>
-										<p class="quantity">Quantity: <span>1</span></p>
-									</div>
-								</li>
-								<li>
-									<div class="priceCart">
-										<img src="/img/shop/cartContainer.png" alt="">
-										<a href="#">Hoodie T.Brothers <!-- <span><i class="fa fa-times"></i></span> --></a>
-										<p>Price:&nbsp;<span>&pound;15,99</span></p>
-										<p class="quantity">Quantity: <span>1</span></p>
-									</div>
-								</li>
-								<li>
-									<div class="total">
-										<a href="#">Sub Total<span>31,98&pound;</span></a>
-									</div>
-								</li>
-							</ul>
-							<button type="submit" class="single_add_to_cart_button button alt buttonView">
-												View Cart
-							</button>
-							<button type="submit" class="single_add_to_cart_button button alt buttonCheck">
-								Checkout
-							</button>
-						</div><!-- end cartItems -->
-					</div><!-- end cartParent -->
-				</div><!--end cartContainer  -->
 				<!-- Open Menu Button -->
 				<a class="open-menu">
 					<!-- Buttons Bars -->
@@ -289,123 +249,23 @@
 				<ul>
 					<!-- Menu Fixed Item -->
 					<li>
-						<a href="#">
+						<a href="#top">
 							Topo
 						</a>
 					</li>
 					<li>
-						<a href="albumsGrid.html">
-							discography
-						</a>
-						<ul class="sub-menu">
-							<!-- Menu Fixed Sub Menu Item -->
-							<li>
-								<a href="albumsFullBackground.html">
-									albums full background
-								</a>
-							</li>
-							<!-- Menu Fixed Sub Menu Item -->
-							<li>
-								<a href="albumsGrid.html">
-									albums grid
-								</a>
-							</li>
-							<!-- Menu Fixed Sub Menu Item -->
-							<li>
-								<a href="albumsSingle1.html">
-									album description
-								</a>
-							</li>
-						</ul>
-					</li>
-					<!-- Menu Fixed Item -->
-					<li>
-						<a href="events.html">
-							events
+						<a href="#albums">
+							Músicas
 						</a>
 					</li>
-					<!-- Menu Fixed Item -->
 					<li>
-						<a href="#">
-							blog
-						</a>
-						<ul class="sub-menu">
-							<!-- Menu Fixed Sub Menu Item -->
-							<li>
-								<a href="blogGrid.html">
-									blog grid
-								</a>
-							</li>
-							<!-- Menu Fixed Sub Menu Item -->
-							<li>
-								<a href="blogSidebarRight.html">
-									blog sidebar
-								</a>
-							</li>
-							<!-- Menu Fixed Sub Menu Item -->
-							<li>
-								<a href="blogSingle.html">
-									blog single
-								</a>
-							</li>
-						</ul>
-					</li>
-					<!-- Menu Fixed Item -->
-					<li>
-						<a href="#">
-							gallery
-						</a>
-						<ul class="sub-menu">
-							<!-- Menu Fixed Sub Menu Item -->
-							<li>
-								<a href="galleryGrid.html">
-									albums grid
-								</a>
-							</li>
-							<!-- Menu Fixed Sub Menu Item -->
-							<li>
-								<a href="galleryScroll.html">
-									albums scroll
-								</a>
-							</li>
-							<!-- Menu Fixed Sub Menu Item -->
-							<li>
-								<a href="gallerySingle.html">
-									gallery single
-								</a>
-							</li>
-						</ul>
-					</li>
-					<!-- Menu Fixed Item -->
-					<li>
-						<a href="#">
-							Other Pages
-						</a>
-						<ul class="sub-menu">
-							<!-- Menu Fixed Sub Menu Item -->
-							<li>
-								<a href="biography.html">
-									Biography
-								</a>
-							</li>
-							<!-- Menu Fixed Sub Menu Item -->
-							<li>
-								<a href="video.html">
-									Video
-								</a>
-							</li>
-						</ul>
-					</li>
-					<!-- Menu Fixed Item -->
-					<li>
-						<a href="contact.html">
-							contact
+						<a href="#events">
+							Eventos
 						</a>
 					</li>
-					<!-- Menu Fixed Item -->
 					<li>
-						<a href="shop.html">
-							shop
+						<a href="#videoclip">
+							Clipes
 						</a>
 					</li>
 				</ul>
@@ -426,7 +286,7 @@
 
 	<!-- =============== START ALBUM COVER SECTION ================ -->
 	@if(count($albums) > 0)
-	<section class="padding albumsHome hide-section">
+	<section id="albums" class="padding albumsHome hide-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -461,7 +321,7 @@
 	@endif
 	@if(count($events) > 0)
 	<!-- =============== START EVENTS SECTION-1 ================ -->
-	<section style="background-image: url(@if(count($homeImages) > 0) '{{$homeImages->next_event_image}}' @else /img/events/tableEventsHome.png @endif);" class="background-properties hide-section paddingHomeEvents">
+	<section id="events" style="background-image: url(@if(count($homeImages) > 0) '{{$homeImages->next_event_image}}' @else /img/events/tableEventsHome.png @endif);" class="background-properties hide-section paddingHomeEvents">
 		<div class="tableEvents">
 			<div class="container">
 				<div class="row">
@@ -503,7 +363,7 @@
 				<div class="col-sm-12">
 					<div class="countdownTitle">
 						<h4>Próximo Show</h4>
-						<a href="{{$firstEvent['link']}}" target="_blank"><img src="/img/events/box.png" alt="Event"></a>
+						<h2>{{{$firstEvent['venue']}}}</h2>
 					</div>
 					<div class="sm-countdown sm_content_element sm-style2" id="sm_countdown-19" data-date="{{$firstEvent['date']}}">
 						<div class="displayCounter">
@@ -640,7 +500,7 @@
 	<!-- =============== END TWITTER SECTION ================ -->
 	@endif
 	<!-- =============== START VIDEO SECTION ================ -->
-	<section class="videoHome hide-section padding">
+	<section id="videoclip" class="videoHome hide-section padding">
 		<div class="container">
 			<div class="row">
 				<div class="sectionTitle">
@@ -895,7 +755,7 @@
 					<div class="col-sm-4">
 						<div class="goTop back-to-top" id="back-to-top">
 							<i class="fa fa-angle-up"></i>
-							<a href="#">Go Top</a>
+							<a href="#">Topo</a>
 						</div>
 					</div>
 				</div>

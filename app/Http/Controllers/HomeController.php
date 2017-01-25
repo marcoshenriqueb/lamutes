@@ -26,7 +26,8 @@ class HomeController extends Controller
         if (count($events) > 0) {
             $c = Carbon::parse($events[0]->date);
             $firstEvent = [
-                'link' => $events[0],
+                'link' => $events[0]->fb_url,
+                'venue' => $events[0]->venue,
                 'date' => $c->year . '/' . $c->month . '/' . $c->day,
             ];
         }

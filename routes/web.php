@@ -29,6 +29,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::resource('/albums', 'AlbumController');
 
     Route::resource('/events', 'EventController');
+
+    Route::resource('/songs', 'SongController');
 });
 
 

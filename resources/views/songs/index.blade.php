@@ -11,34 +11,40 @@
             <div class="panel panel-default">
                 <div class="panel-heading clearfix">
                     <div class="pull-left">
-                        <span class="lead">Eventos</span>
+                        <span class="lead">Músicas</span>
                     </div>
                     <div class="pull-right">
-                        <a href="{{route('events.create')}}" class="btn btn-default">Novo evento</a>
+                        <a href="{{route('songs.create')}}" class="btn btn-default">Nova música</a>
                     </div>
                 </div>
                 <div class="panel-body">
-                    @if(count($events) === 0)
-                        <p class="bg-warning" style="padding:1rem;">Sem eventos cadastrados</p>
+                    @if(count($songs) === 0)
+                        <p class="bg-warning" style="padding:1rem;">Sem músicas cadastradas</p>
                     @else
                         <div class="table-responsive">
                             <table class="table table-hover">
                                 <tbody>
-                                    @foreach($events as $e)
+                                    @foreach($songs as $s)
                                         <tr>
-                                            <td><h3>{{$e->venue}}</h3></td>
-                                            <td><p>{{$e->date}}</p></td>
+                                            <td><p>{{$s->title}}</p></td>
+                                            <td><p>{{$s->album->title}}</p></td>
                                             <td>
-                                                <a href="{{route('events.edit', ['event' => $e->id])}}" class="btn btn-warning">Editar</a>
+                                                <audio controls>
+                                                    <source src="{{$s->file}}" type="audio/mp3">
+                                                    Your browser does not support the audio element.
+                                                </audio>
                                             </td>
                                             <td>
-                                                <a href="{{ route('events.destroy', ['event' => $e->id]) }}"
+                                                <a href="{{route('songs.edit', ['song' => $s->id])}}" class="btn btn-warning">Editar</a>
+                                            </td>
+                                            <td>
+                                                <a href="{{ route('events.destroy', ['song' => $s->id]) }}"
                                                     class="btn btn-danger"
                                                     onclick="event.preventDefault();
                                                              document.getElementById('delete-form').submit();">
                                                     Deletar
                                                 </a>
-                                                {!! Form::open(['url' => '/admin/events/' . $e->id, 'id' => 'delete-form', 'method' => 'DELETE', 'style' => 'display: none;']) !!}
+                                                {!! Form::open(['url' => '/admin/songs/' . $s->id, 'id' => 'delete-form', 'method' => 'DELETE', 'style' => 'display: none;']) !!}
                                                 {!! Form::close() !!}
                                                 </form>
                                             </td>

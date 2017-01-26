@@ -44,13 +44,14 @@
 	</section>
 	<!-- =============== END BREADCRUMB ================ -->
 
+	@if(count($songs) > 0)
 	<!-- =============== START PLAYER ================ -->
 	<div class="main-music-player">
 		<a class="hide-player-button">
 			<i class="fa fa-plus"></i>
 			<i class="fa fa-minus"></i>
 		</a>
-		<div id="mesh-main-player" class="jp-jplayer" data-audio-src="/audio/flute.mp3" data-title="See right through ft. Fiora" data-artist="Tensnake"></div>
+		<div id="mesh-main-player" class="jp-jplayer" data-audio-src="/audio/flute.mp3" data-title="See right through ft. Fiora" data-artist="Lamutes"></div>
 
 		<div id="mesh-main-player-content" class="mesh-main-player" role="application" aria-label="media player">
 			<div class="container">
@@ -98,7 +99,6 @@
 		</div>
 	</div>
 	<!-- =============== END PLAYER ================ -->
-
 	<!-- =============== START PLAYLIST ================ -->
 	<div class="playlist-wrapper" id="playlist-wrapper">
 		<div class="jp-playlist container">
@@ -107,8 +107,9 @@
 				<span class="about-length">LENGTH</span>
 				<span class="about-available">AVAILABLE ON</span>
 			</div>
-			<div class="trak-item" data-audio="/audio/flute.mp3" data-artist="Tensnake" data-thumbnail="/img/player/thumbnail.png" data-id="trak-200">
-				<audio preload="metadata" src="/audio/flute.mp3" title="See right through ft. Fiora"></audio>
+			@foreach($songs as $s)
+			<div class="trak-item" data-audio="{{$s->file}}" data-artist="Lamutes" data-thumbnail="{{$s->album->cover_image}}" data-id="trak-200">
+				<audio preload="metadata" src="{{$s->file}}" title="{{$s->title}}"></audio>
 				<div class="additional-button">
 					<div class="center-y-table">
 						<a href="#">
@@ -127,7 +128,7 @@
 				<div class="name-artist">
 					<div class="center-y-table">
 						<h2>
-							Tensnake - See Right Through Ft. Fiora
+							{{$s->title}}
 						</h2>
 					</div>
 				</div>
@@ -135,94 +136,11 @@
 					00:00
 				</time>
 			</div>
-			<div class="trak-item" data-audio="/audio/2.mp3" data-artist="Jack U ft. Kiesza" data-thumbnail="/img/player/thumbnail.png" data-id="trak-201">
-				<audio preload="metadata" src="/audio/2.mp3" title="Take You There"></audio>
-				<div class="additional-button">
-					<div class="center-y-table">
-						<a href="#">
-							<i class="fa fa-apple"></i>
-						</a>
-						<a href="#">
-							<i class="fa fa-soundcloud"></i>
-						</a>
-					</div>
-				</div>
-				<div class="play-pause-button">
-					<div class="center-y-table">
-						<i class="fa fa-play"></i>
-					</div>
-				</div>
-				<div class="name-artist">
-					<div class="center-y-table">
-						<h2>
-							Jack U ft. Kiesza - Take You There
-						</h2>
-					</div>
-				</div>
-				<time class="trak-duration">
-					00:00
-				</time>
-			</div>
-			<div class="trak-item" data-audio="/audio/3.mp3" data-artist="Bob Sinclair" data-thumbnail="/img/player/thumbnail.png" data-id="trak-201">
-				<audio preload="metadata" src="/audio/3.mp3" title="Cinderella"></audio>
-				<div class="additional-button">
-					<div class="center-y-table">
-						<a href="#">
-							<i class="fa fa-apple"></i>
-						</a>
-						<a href="#">
-							<i class="fa fa-soundcloud"></i>
-						</a>
-					</div>
-				</div>
-				<div class="play-pause-button">
-					<div class="center-y-table">
-						<i class="fa fa-play"></i>
-					</div>
-				</div>
-				<div class="name-artist">
-					<div class="center-y-table">
-						<h2>
-							Bob Sinclair - Cinderella
-						</h2>
-					</div>
-				</div>
-				<time class="trak-duration">
-					00:00
-				</time>
-			</div>
-			<div class="trak-item" data-audio="/audio/4.mp3" data-artist="Yuna" data-thumbnail="/img/player/thumbnail.png" data-id="trak-201">
-				<audio preload="metadata" src="/audio/4.mp3" title="Lullabies"></audio>
-				<div class="additional-button">
-					<div class="center-y-table">
-						<a href="#">
-							<i class="fa fa-apple"></i>
-						</a>
-						<a href="#">
-							<i class="fa fa-soundcloud"></i>
-						</a>
-					</div>
-				</div>
-				<div class="play-pause-button">
-					<div class="center-y-table">
-						<i class="fa fa-play"></i>
-					</div>
-				</div>
-				<div class="name-artist">
-					<div class="center-y-table">
-						<h2>
-							Yuna - Lullabies
-						</h2>
-					</div>
-				</div>
-				<time class="trak-duration">
-					00:00
-				</time>
-			</div>
+			@endforeach
 		</div>
 	</div>
 	<!-- =============== END PLAYLIST ================ -->
-
+	@endif
 	<!-- =============== START TOP HEADER ================ -->
 	<div class="topHeader" >
 		<div class="header">

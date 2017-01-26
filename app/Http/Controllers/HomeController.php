@@ -6,6 +6,7 @@ use App\Album;
 use App\Cover;
 use App\Event;
 use App\HomeImages;
+use App\Song;
 use Carbon\Carbon;
 
 class HomeController extends Controller
@@ -21,6 +22,7 @@ class HomeController extends Controller
         $cover = Cover::first();
         $albums = Album::all();
         $events = Event::orderBy('date', 'asc')->get();
+        $songs = Song::with('album')->get();
         $firstEvent = false;
 
         if (count($events) > 0) {
@@ -38,6 +40,6 @@ class HomeController extends Controller
             return redirect()->route('login');
         }
 
-        return view('home', compact('cover', 'albums', 'events', 'firstEvent', 'homeImages'));
+        return view('home', compact('cover', 'albums', 'events', 'firstEvent', 'homeImages', 'songs'));
     }
 }

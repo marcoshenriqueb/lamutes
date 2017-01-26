@@ -30,6 +30,8 @@
                                             <td><h3>{{$a->title}}</h3></td>
                                             <td>
                                                 <a href="{{route('albums.edit', ['album' => $a->id])}}" class="btn btn-warning">Editar</a>
+                                            </td>
+                                            <td>
                                                 <a href="{{ route('albums.destroy', ['album' => $a->id]) }}"
                                                     class="btn btn-danger"
                                                     onclick="event.preventDefault();
@@ -37,7 +39,7 @@
                                                     Deletar
                                                 </a>
                                                 {!! Form::open(['url' => '/admin/albums/' . $a->id, 'id' => 'delete-form', 'method' => 'DELETE', 'style' => 'display: none;']) !!}
-                                                {!! Form::close() !!}                                                    
+                                                {!! Form::close() !!}
                                                 </form>
                                             </td>
                                         </tr>

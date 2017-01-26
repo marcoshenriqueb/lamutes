@@ -21,6 +21,9 @@
             <li class="list-group-item">
               <a href="{{ url('/admin/images') }}"><span class="lead">Imagens da home</span></a>
             </li>
+            <li class="list-group-item">
+              <a href="{{ url('/admin/songs') }}"><span class="lead">Músicas</span></a>
+            </li>
         </div>
     </div>
 </div>

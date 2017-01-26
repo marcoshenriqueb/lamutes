@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                    {!! Form::open(['url' => '/admin/events', 'files' => true]) !!}
+                    {!! Form::open(['url' => '/admin/events']) !!}
                         <div class="form-group">
                             {{Form::label('venue', 'Lugar')}}
                             {{Form::text('venue', null, ['class' => 'form-control'])}}

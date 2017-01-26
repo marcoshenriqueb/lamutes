@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Album extends Model
+class Song extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,11 +12,11 @@ class Album extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'subtitle', 'disk_image', 'cover_image',
+        'title', 'album_id', 'file',
     ];
 
-    public function songs()
+    public function album()
     {
-        return $this->hasMany('App\Song');
+        return $this->belongsTo('App\Album');
     }
 }

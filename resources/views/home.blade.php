@@ -427,8 +427,11 @@
 					<span class="heading-b3"></span>
 					<p>Acessem nosso canal no <a href="https://www.youtube.com/channel/UCB023eytdBzky0ZG6fXvOxg">Youtube</a> para mais novidades.</p>
 				</div><!-- end sectionTtile -->
-				<div class="col-sm-4 col-sm-offset-4">
+				<div class="col-sm-4 col-sm-offset-2">
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/BC_A8xQWpVI" allowfullscreen></iframe>
+				</div><!-- end col-sm-4 -->
+				<div class="col-sm-4">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/eezQ4VUffJ4" frameborder="0" allowfullscreen></iframe>
 				</div><!-- end col-sm-4 -->
 			</div>
 		</div>

@@ -39,24 +39,24 @@ jQuery(function(){
     function unAffixPhoneMenu() {
       jQuery('header.header').removeClass('phone-menu-bg');
     };
-    if (jQuery(window).width() <= 768){
-          affixPhoneMenu();
-        } else {
-         jQuery(window).resize(function(){
-          if (jQuery(window).width() <= 768){
-            affixPhoneMenu();
-          }
-      });
-    };
-    if (jQuery(window).width() >= 768){
-          unAffixPhoneMenu();
-        } else {
-         jQuery(window).resize(function(){
-          if (jQuery(window).width() >= 768){
-            unAffixPhoneMenu();
-          }
-      });
-    };
+    // if (jQuery(window).width() <= 768){
+    //       affixPhoneMenu();
+    //     } else {
+    //      jQuery(window).resize(function(){
+    //       if (jQuery(window).width() <= 768){
+    //         affixPhoneMenu();
+    //       }
+    //   });
+    // };
+    // if (jQuery(window).width() >= 768){
+    //       unAffixPhoneMenu();
+    //     } else {
+    //      jQuery(window).resize(function(){
+    //       if (jQuery(window).width() >= 768){
+    //         unAffixPhoneMenu();
+    //       }
+    //   });
+    // };
     jQuery('.breadcrumb-fullscreen-parent').affix({
         offset: {
           top: function () {

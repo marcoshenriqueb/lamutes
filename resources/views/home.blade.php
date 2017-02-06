@@ -103,9 +103,9 @@
 	<div class="playlist-wrapper" id="playlist-wrapper">
 		<div class="jp-playlist container">
 			<div class="about-list clearfix">
-				<span class="about-name">NAME</span>
-				<span class="about-length">LENGTH</span>
-				<span class="about-available">AVAILABLE ON</span>
+				<span class="about-name">NOME</span>
+				<span class="about-length">DURAÇÃO</span>
+				<span class="about-available">DISPONÍVEL EM</span>
 			</div>
 			@foreach($songs as $s)
 			<div class="trak-item" data-audio="{{$s->file}}" data-artist="Lamutes" data-thumbnail="{{$s->album->cover_image}}" data-id="trak-200">
@@ -259,7 +259,7 @@
 							</tr>
 							@foreach($events as $e)
 							<tr>
-								<td class="aqura-date"><a href="#"><i class="fa fa-plus"></i></a><a href="singleEvent.html">{{$e->date}}</a></td>
+								<td class="aqura-date">{{$e->date}}</td>
 								<td class="aqura-location"><a href="singleEvent.html">{{$e->venue}}</a></td>
 								<td class="aqura-city"><a href="singleEvent.html">{{$e->location}}</a></td>
 								@if($e->fb_url)

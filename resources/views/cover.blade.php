@@ -45,6 +45,13 @@
                     @endif
                   </div>
                   <div class="form-group">
+                    {{Form::label('cover_image', 'Foto de capa no celular')}}
+                    {{Form::file('cover_image_responsive')}}
+                    @if($errors->has('cover_image_responsive'))
+                      <p class="text-danger">{{$errors->first('cover_image_responsive')}}</p>
+                    @endif
+                  </div>
+                  <div class="form-group">
                     {{Form::submit('Salvar', ['class' => 'btn btn-primary'])}}
                   </div>
                 {!! Form::close() !!}

@@ -28,6 +28,7 @@ class CoverRequest extends FormRequest
             'subtitle1' => 'string',
             'subtitle2' => 'string',
             'cover_image' => 'required|image',
+            'cover_image_responsive' => 'required|image',
         ];
     }
 }

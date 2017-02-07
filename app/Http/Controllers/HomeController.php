@@ -21,7 +21,7 @@ class HomeController extends Controller
     {
         $cover = Cover::first();
         $albums = Album::all();
-        $events = Event::orderBy('date', 'asc')->get();
+        $events = Event::where('date', '>', Carbon::now())->orderBy('date', 'asc')->get();
         $songs = Song::with('album')->get();
         $firstEvent = false;
 

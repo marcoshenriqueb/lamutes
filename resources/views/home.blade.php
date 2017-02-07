@@ -8,6 +8,16 @@
 	<link rel="icon" href="/img/content/icon.png">
 	<!-- ========== CSS INCLUDES ========== -->
 	<link rel="stylesheet" href="/css/master.css">
+	<style media="screen">
+		.breadcrumb.breadcrumb-fullscreen{
+			background-image: url('{{$cover->cover_image}}');
+		}
+		@media (max-width:768px){
+			.breadcrumb.breadcrumb-fullscreen{
+				background-image: url('{{$cover->cover_image_responsive}}');
+			}
+		}
+	</style>
 </head>
 <body>
 	<div class="page-loader">
@@ -15,13 +25,15 @@
 			  <img src="/loader/loader.gif" alt="" class="loader-img">
 		 </div>
 	</div>
-
 	<!-- =============== START BREADCRUMB ================ -->
 	<section id="top" class="no-mb">
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="breadcrumb-fullscreen-parent phone-menu-bg">
-					<div class="breadcrumb breadcrumb-fullscreen alignleft small-description overlay almost-black-overlay" style="background-image: url('{{$cover->cover_image}}');" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
+					<div class="breadcrumb breadcrumb-fullscreen alignleft small-description overlay almost-black-overlay"
+						 data-stellar-background-ratio="0.5"
+						 data-stellar-vertical-offset="0"
+					>
 						<div class="starTitle">
 							@if($cover->subtitle1)
 								<h4>{{$cover->subtitle1}}</h4>

@@ -41,6 +41,11 @@ class CoverController extends Controller
         $file_name = Carbon::now() . '_cover' . '.' . $file->guessClientExtension();
         $file->storeAs('public/cover/', $file_name);
         $cover->cover_image = '/storage/cover/' . $file_name;
+
+        $file = $request->file('cover_image_responsive');
+        $file_name = Carbon::now() . '_cover' . '.' . $file->guessClientExtension();
+        $file->storeAs('public/cover-mobile/', $file_name);
+        $cover->cover_image_responsive = '/storage/cover-mobile/' . $file_name;
         $cover->save();
 
         return redirect()->route('admin.index')->with('status', 'Capa salva!');
@@ -59,6 +64,14 @@ class CoverController extends Controller
             $file->storeAs('public/cover/', $file_name);
             $cover->cover_image = '/storage/cover/' . $file_name;
         }
+
+        if ($request->hasFile('cover_image_responsive')) {
+            $file = $request->file('cover_image_responsive');
+            $file_name = Carbon::now() . '_cover' . '.' . $file->guessClientExtension();
+            $file->storeAs('public/cover-mobile/', $file_name);
+            $cover->cover_image_responsive = '/storage/cover-mobile/' . $file_name;
+        }
+
         $cover->save();
 
         return redirect()->route('admin.index')->with('status', 'Capa salva!');

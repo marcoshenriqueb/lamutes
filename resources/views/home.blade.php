@@ -188,11 +188,14 @@
 							Músicas
 						</a>
 					</li>
+	
+					@if(count($events) > 0)
 					<li>
 						<a href="#events">
 							Eventos
 						</a>
 					</li>
+					@endif
 					<li>
 						<a href="#videoclip">
 							Clipes
